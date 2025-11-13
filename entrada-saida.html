@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentação de Estoque | Sistema de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Sistema de Estoque</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="entrada-saida.html" class="active">Movimentação</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="movement-section">
+            <h2>Registrar Movimentação de Estoque</h2>
+
+            <div class="form-container">
+                <form class="movement-form">
+                    <div class="form-group">
+                        <label for="tipoMovimentacao">Tipo de Movimentação:</label>
+                        <select id="tipoMovimentacao" name="tipoMovimentacao" required>
+                            <option value="">Selecione...</option>
+                            <option value="entrada">Entrada</option>
+                            <option value="saida">Saída</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="produto">Produto:</label>
+                        <input type="text" id="produto" name="produto" list="listaProdutos"
+                            placeholder="Pesquise ou digite o nome do produto" required>
+                        <datalist id="listaProdutos">
+                            <option value="Camiseta Algodão Branca P"></option>
+                            <option value="Calça Jeans Azul M"></option>
+                            <option value="Par de Meias Esportivas"></option>
+                            <option value="Tênis Casual Preto 40"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataMovimentacao">Data:</label>
+                        <input type="date" id="dataMovimentacao" name="dataMovimentacao" value="2025-06-02" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações (opcional):</label>
+                        <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Registrar Movimentação</button>
+                </form>
+            </div>
+
+            <h3 class="recent-movements-title">Últimas Movimentações</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Observações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>02/06/2025</td>
+                            <td class="movement-type-entry">Entrada</td>
+                            <td>Camiseta Algodão Branca P</td>
+                            <td>+50</td>
+                            <td>Recebimento de fornecedor</td>
+                        </tr>
+                        <tr>
+                            <td>02/06/2025</td>
+                            <td class="movement-type-exit">Saída</td>
+                            <td>Calça Jeans Azul M</td>
+                            <td>-10</td>
+                            <td>Venda online #1234</td>
+                        </tr>
+                        <tr>
+                            <td>01/06/2025</td>
+                            <td class="movement-type-exit">Saída</td>
+                            <td>Par de Meias Esportivas</td>
+                            <td>-5</td>
+                            <td>Ajuste de estoque</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Estoque. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
