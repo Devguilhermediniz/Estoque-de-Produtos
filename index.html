@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Sistema de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Sistema de Estoque</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="entrada-saida.html">Movimentação</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="dashboard-overview">
+            <h2>Visão Geral do Estoque</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Total de Produtos</h3>
+                    <p class="metric">1500</p>
+                </div>
+                <div class="card">
+                    <h3>Produtos em Baixo Estoque</h3>
+                    <p class="metric danger">25</p>
+                </div>
+                <div class="card">
+                    <h3>Últimas Movimentações</h3>
+                    <ul>
+                        <li>Entrada: Produto A (10 unidades) - 01/06/2025</li>
+                        <li>Saída: Produto B (5 unidades) - 31/05/2025</li>
+                        <li>Entrada: Produto C (20 unidades) - 30/05/2025</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Estoque. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
