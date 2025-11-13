@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | Sistema de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Sistema de Estoque</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="produtos.html" class="active">Produtos</a></li>
+                    <li><a href="entrada-saida.html">Movimentação</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="products-list">
+            <h2>Gerenciamento de Produtos</h2>
+            <div id="feedbackMessage" class="feedback-message" style="display: none;">
+            </div>
+            <div class="controls-bar">
+                <input type="text" placeholder="Pesquisar produto..." class="search-input" id="searchInput">
+                <a href="cadastro-produto.html" class="btn btn-primary">Adicionar Produto</a>
+            </div>
+
+            <div class="table-container">
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Produto</th>
+                            <th>Categoria</th>
+                            <th>Estoque Atual</th>
+                            <th>Preço (R$)</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Camiseta Algodão Branca P</td>
+                            <td>Vestuário</td>
+                            <td>150</td>
+                            <td>29.90</td>
+                            <td>
+                                <button class="btn btn-secondary edit-btn">Editar</button>
+                                <button class="btn btn-danger delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Calça Jeans Azul M</td>
+                            <td>Vestuário</td>
+                            <td>80</td>
+                            <td>99.90</td>
+                            <td>
+                                <button class="btn btn-secondary edit-btn">Editar</button>
+                                <button class="btn btn-danger delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Par de Meias Esportivas</td>
+                            <td>Acessórios</td>
+                            <td>300</td>
+                            <td>15.00</td>
+                            <td>
+                                <button class="btn btn-secondary edit-btn">Editar</button>
+                                <button class="btn btn-danger delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Tênis Casual Preto 40</td>
+                            <td>Calçados</td>
+                            <td>45</td>
+                            <td>179.99</td>
+                            <td>
+                                <button class="btn btn-secondary edit-btn">Editar</button>
+                                <button class="btn btn-danger delete-btn">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Estoque. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
