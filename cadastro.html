@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto | Sistema de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Sistema de Estoque</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="produtos.html" class="active">Produtos</a></li>
+                    <li><a href="entrada-saida.html">Movimentação</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="product-form-section">
+            <h2>Cadastrar Novo Produto</h2>
+            <div id="feedbackMessage" class="feedback-message" style="display: none;"></div>
+            <div class="form-container">
+                <form class="product-form">
+                    <input type="hidden" id="productId" name="productId" value="">
+
+                    <div class="form-group">
+                        <label for="nomeProduto">Nome do Produto:</label>
+                        <input type="text" id="nomeProduto" name="nomeProduto"
+                            placeholder="Ex: Camiseta Algodão Branca P" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricaoProduto">Descrição (opcional):</label>
+                        <textarea id="descricaoProduto" name="descricaoProduto" rows="4"
+                            placeholder="Detalhes do produto, características, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoriaProduto">Categoria:</label>
+                        <input type="text" id="categoriaProduto" name="categoriaProduto" list="listaCategorias"
+                            placeholder="Ex: Vestuário, Eletrônicos" required>
+                        <datalist id="listaCategorias">
+                            <option value="Vestuário"></option>
+                            <option value="Calçados"></option>
+                            <option value="Acessórios"></option>
+                            <option value="Eletrônicos"></option>
+                            <option value="Alimentos"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precoCusto">Preço de Custo (R$):</label>
+                        <input type="number" id="precoCusto" name="precoCusto" step="0.01" min="0" placeholder="0.00"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precoVenda">Preço de Venda (R$):</label>
+                        <input type="number" id="precoVenda" name="precoVenda" step="0.01" min="0" placeholder="0.00"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estoqueInicial">Estoque Inicial:</label>
+                        <input type="number" id="estoqueInicial" name="estoqueInicial" min="0" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estoqueMinimo">Estoque Mínimo (Alerta):</label>
+                        <input type="number" id="estoqueMinimo" name="estoqueMinimo" min="0" value="10" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar Produto</button>
+                    <a href="produtos.html" class="btn btn-secondary cancel-btn">Cancelar</a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Estoque. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="cadastro-produto.js"></script>
+</body>
+
+</html>
